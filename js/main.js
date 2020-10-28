@@ -159,5 +159,151 @@
     console.log(parseInt(1010011, 2));
     console.log(skaiciuXOR.toString(2));
 
+    console.clear();
+
+    const day = 'ant';
+
+    switch (day) {
+        case 'pir':
+            console.log('pirmadienis');
+            break;
+        case 'ant':
+            console.log('antradienis');
+            break;
+        case 'tre':
+            console.log('treciadienis');
+            break;
+
+        default:
+            console.log('kita diena??..');
+            break;
+    }
+
+    console.clear();
+
+    // ternary
+
+    const ats = 5 ? '' ? 7 : 8 : true ? 13 : false;
+
+    console.log(ats);
+
+    console.clear();
+
+
+    const pajamas = [100, 200, 50, 0, 40, 15, 314];
+    const size = pajamas.length;
+
+    function arTesti(iterator, sum) {
+        if (iterator >= size) {
+            return false;
+        }
+        if (sum < 50) {
+            return false;
+        }
+
+        return true;
+    }
+
+    let i = 0;
+    let suma = Infinity;
+
+    for (; arTesti(i, suma);) {
+        suma = pajamas[i];
+        console.log(suma);
+
+        i++;
+    }
+
+    console.log(i);
+
+    console.log('-----------');
+
+    const abc = 'qwertyuiopasdfghjklzxcvbnm';
+
+    const isPriekio = 1;
+    const isGalo = 2;
+    let p = 0;
+    let g = abc.length - 1;
+
+    for (; p < g;) {
+
+        console.log(abc[p], abc[g]);
+
+        p += isPriekio;
+        g -= isGalo;
+    }
+
+
+    console.log('----------------');
+
+    const matrix = [
+        [1, 2, 3, 4],
+        [11, 22, 33, 44],
+        [111, 222, 333, 444],
+        [1111, 2222, 3333, 4444],
+    ];
+
+    const mSize = matrix.length;
+
+    for (let e = 0, s = mSize - 1;
+        e < mSize && s >= 0;
+        e++, s--) {
+        console.log(matrix[e][s]);
+    }
+
+    console.log('------------');
+
+    // FOR IN - dirba su array index
+    for (let x in pajamas) {
+        const suma = pajamas[x];
+        console.log(x, suma);
+    }
+
+    console.log('------------');
+
+    // FOR OF - dirba su array įrašu
+    for (let x of pajamas) {
+        console.log(x);
+    }
+
+    console.log('------------');
+
+    // WHILE
+    let randomSuma = 0;
+    const target = 10;
+    let randomCounter = 0;
+
+    while (randomSuma < target) {
+        randomSuma += Math.random();
+        randomCounter++;
+        console.log(randomSuma);
+    }
+
+
+    // for (let i = 0; i < 1; i++) {
+    //     randomSuma += Math.random();
+    //     console.log(randomSuma);
+    //     randomCounter++;
+
+    //     if (randomSuma < target) {
+    //         i--;
+    //     }
+    // }
+
+    console.log(randomCounter);
+
+
+    console.log('---------');
+
+    // DO-WHILE
+    let dwTarget = 10;
+    let dwSuma = 1000;
+
+    do {
+        dwSuma++;
+        console.log(dwSuma);
+    } while (dwSuma < dwTarget);
+
+    // ES6+ : foreach, map, filter, sort, reduce
 
 })();
