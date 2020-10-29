@@ -114,8 +114,23 @@ function sum(...a) {
     return suma;
 }
 
-console.log(sum(4, 7, 8, 12, 46, -156, -87, 545));
+const numbersToSum = [4, 7, 8, 12, 46, -156, -87, 545];
+
+console.log(sum(...numbersToSum));
 console.log(sum(4, 7));
 console.log(sum(4));
 
+// REDUCE
+const reduceSum = numbersToSum.reduce((total, num) => total + num, 0);
+console.log(reduceSum);
 
+const peopleAgeSum = people.reduce((total, person) => total + person.age, 0);
+console.log(peopleAgeSum);
+
+const reduceTexts = texts.reduce((sentence, word) => {
+    if (sentence === '') {
+        return sentence + word;
+    }
+    return sentence + ', ' + word
+}, '');
+console.log(reduceTexts);
